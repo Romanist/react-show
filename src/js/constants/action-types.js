@@ -1,0 +1,1 @@
+export const CLICK_MAIN_SCREEN = "CLICK_MAIN_SCREEN"
