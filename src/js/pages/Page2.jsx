@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
 
-class Page1 extends Component {
+class Page2 extends Component {
   render() {
     return (
         <div
@@ -13,4 +13,4 @@ class Page1 extends Component {
   }
 }
 
-export default Page1
+export default Page2

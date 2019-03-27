@@ -15,9 +15,6 @@ class QuarterBlock extends Component {
     this.setState({
       isClicked: true
     })
-    // setTimeout(function () {
-    //   alert('hey!')
-    // }, 500)
   }
 
   render() {
