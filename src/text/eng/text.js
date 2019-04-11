@@ -1,18 +1,18 @@
 let text = {
   textLeftTop: {
-    text: 'Link 1',
+    text: 'Link w/ more pages',
     link: '/page1'
   },
   textRightTop: {
-    text: 'Link 2',
+    text: 'Link for async',
     link: '/page2'
   },
   textLeftBot: {
-    text: 'Link 3',
+    text: 'Color shemes',
     link: '/page3'
   },
   textRightBot: {
-    text: 'Link 4',
+    text: 'Not ready yet',
     link: '/page4'
   },
 }

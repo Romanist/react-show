@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from "react-router-dom"
+
+import BackButton from '../components/BackButton'
 
 class Page1 extends Component {
   render() {
@@ -8,7 +9,7 @@ class Page1 extends Component {
           className="page4 page"
         >
           <span>This page is not ready yet</span>
-          <Link to="/">Get Back</Link>
+          <BackButton />
           <span>or get backed in few seconds</span>
         </div>
     )

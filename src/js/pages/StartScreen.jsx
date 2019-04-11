@@ -16,14 +16,18 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    clickedSquare: state.clickedSquare,
-    timeOutToMainPageState: state.timeOutToMainPageState,
-    backToMainPageState: state.backToMainPageState,
-    firstLoaded: state.firstLoaded,
-  }
-}
+// function mapStateToProps(state) {
+//   return {
+//     clickedSquare: state.clickedSquare,
+//     timeOutToMainPageState: state.timeOutToMainPageState,
+//     backToMainPageState: state.backToMainPageState,
+//     firstLoaded: state.firstLoaded,
+//   }
+// }
+
+const mapStateToProps = state => ({
+  ...state
+})
 
 class StartScreen extends Component {
   constructor() {
@@ -58,10 +62,9 @@ class StartScreen extends Component {
     this.setState({
       centerSquares: true
     })
-    // console.log(this.props.firstLoaded)
 
-    // check if page just downloaded
-    if (!this.props.firstLoaded) this.props.firstLoadHandle(true)
+    this.props.firstLoadHandle(true)
+    window.removeEventListener('focus', this.handleLoad)
 
     // clear timeout if rerutn to main page another way
     if (this.props.timeOutToMainPageState) clearTimeout(this.props.timeOutToMainPageState.timeOutToMainPageState)
@@ -72,6 +75,8 @@ class StartScreen extends Component {
     this.setState({
       centerSquares: false
     })
+
+    this.props.firstLoadHandle(false)
 
     const id = uuidv1()
     this.props.clickMainScreen({ element, id })

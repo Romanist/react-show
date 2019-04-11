@@ -3,6 +3,8 @@ import {
   TIMEOUT_TO_MAIN_PAGE,
   BACK_TO_MAIN_PAGE,
   FIRST_LOAD,
+  CHOOSE_EXAMPLE,
+  DATA_LOADED,
 } from "../constants/action-types"
 
 export function clickMainScreen(payload) {
@@ -19,4 +21,12 @@ export function backToMainPage(payload) {
 
 export function firstLoadHandle(payload) {
   return { type: FIRST_LOAD, payload }
+}
+
+export function chooseExampleToShow(payload) {
+  return { type: CHOOSE_EXAMPLE, payload }
+}
+
+export function getData(payload) {
+  return { type: DATA_LOADED, payload }
 }

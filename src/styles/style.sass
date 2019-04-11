@@ -52,6 +52,22 @@ html
   &.transition-exit
     transform: scale(0.5, 0.5) translate(-50%, -50%)
 
+  &__back
+    position: absolute
+    bottom: 20px
+    right: 20px
+    animation: back-appear 3s ease
+
+@keyframes back-appear
+  0%, 50%
+    transform: translateY(100px)
+  100%
+    transform: translateY(0)
+
+.page1
+  flex-wrap: wrap
+  flex-direction: column
+
 .page2
   background-color: $main-color-1
 
@@ -74,7 +90,7 @@ html
 
 .page3
   flex-direction: column
-  
+
   &.transition-enter
     transform: scale(0.496, 0.498) translate(-50%, 50%)
 
@@ -128,11 +144,15 @@ html
   transition: all ease .6s
 
   color: $main-color-1
-  font-weight: bold
+  // font-weight: bold
+  text-decoration: none
   font-size: 50px
 
   background-color: $main-color-2
   opacity: 0
+
+  &:hover
+    transform: scale(.98, .98)
 
 .block-left-top
   -webkit-transform: translate(-50%, -50%)

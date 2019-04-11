@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom"
+
 import { colorsArray } from "../../styles/cssInJS/css"
+import BackButton from '../components/BackButton'
 
 class Page3 extends Component {
   getNewColor = (e) => {
@@ -35,7 +37,7 @@ class Page3 extends Component {
         >
           <Link to="#" onClick={this.getNewColor}>Change Colors to Random</Link>
           <Link to="#" onClick={this.reverseColors}>Reverse Colors</Link>
-          <Link to="/">BACK</Link>
+          <BackButton />
         </div>
     )
   }
